@@ -1,0 +1,19 @@
+<main>
+  <header class="banner">
+    <h1 class="pagetitle">JOURNEY FORGE DEVELOPERS</h1>
+  </header>
+  <div class="container">
+    <div class="devlist" fxLayout="row wrap" fxLayoutGap="20px grid">
+      <div *ngFor="let dev of devs">
+        <mat-card class="devcards" appElevation>
+          <mat-card-content class="content">
+            <h2>{{dev.name}}</h2>
+          </mat-card-content>
+          <img mat-card-image class="devimg" src="{{dev.image}}">
+          <mat-card-footer class="footer">
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</main>

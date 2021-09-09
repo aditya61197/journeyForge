@@ -1,0 +1,57 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8111/eureka
+    fetch-registry: true
+    register-with-eureka: true
+spring:
+  application:
+    name: api-gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: AuthenticationService
+          uri: http://localhost:9999
+          predicates:
+            - Path=/AuthenticationService/**
+          filters:
+            - RewritePath=/AuthenticationService(?<segment>/?.*), $\{segment}
+
+        - id: journeyservice
+          uri: http://localhost:8333
+          predicates:
+            - Path=/journey/**
+          filters:
+            - RewritePath=/journey(?<segment>/?.*), $\{segment}
+
+        - id: studiowebclientservice
+          uri: http://localhost:8555
+          predicates:
+            - Path=/studio/**
+          filters:
+            - RewritePath=/studio/(?<segment>.*), /$\{segment}
+
+
+        - id: userservice
+          uri: http://localhost:8222
+          predicates:
+            - Path=/userservice/**
+          filters:
+            - RewritePath=/userservice(?<segment>/?.*), $\{segment}
+
+        - id: clientwebappservice
+          uri: http://localhost:8444
+          predicates:
+            - Path=/**
+          filters:
+            - RewritePath=/(?<segment>.*), /$\{segment}
+
+        - id: dataprofiling
+          uri: http://localhost:8535
+          predicates:
+            - Path=/dataprofiling/**
+          filters:
+            - RewritePath=/dataprofiling(?<segment>.*), /$\{segment}

@@ -1,0 +1,66 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  position: relative;
+  margin-top: -21px;
+  top: 12px;
+  height: 40px;
+  left: 16px;
+  cursor: pointer;
+}
+
+.grid-Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userpic {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.initials {
+  color: rgb(250, 244, 244);
+  font-size: 17px;
+  line-height: 19px;
+  letter-spacing: 0.2625px;
+}
+
+#sidenav {
+  width: 220px;
+}
+
+h1.example-app-name {
+  margin-left:20px;
+  cursor: pointer;
+  font-family: "AlegreyaBold";
+  color:#FFFF;
+  font-weight: 300;
+  font-size: 1.58rem;
+  top:0;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}

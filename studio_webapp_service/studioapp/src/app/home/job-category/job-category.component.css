@@ -1,0 +1,70 @@
+mat-form-field
+{
+    display: block; 
+}
+
+.example-chip-list
+{
+    width: 100%;
+}
+
+.reqedu-full-block
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reqedu-name-block
+{
+    width: 60%;
+}
+
+.reqedu-percentage-block
+{
+   width: 20%;
+}
+
+.del-reqedu-btn-wrapper
+{
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.34375em;
+}
+
+.del-reqedu-btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.del-icon
+{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addreq-btn
+{
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    /* font-weight: 600; */
+    font-size: inherit;
+    background: #673ab70a;
+    color: #673ab7;
+    border: 2px solid #673ab7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addreq-btn:hover
+{
+    color: white;
+    background: #673ab7;
+}

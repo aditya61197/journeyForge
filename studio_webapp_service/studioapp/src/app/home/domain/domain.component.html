@@ -1,0 +1,27 @@
+<div class="domains-component">
+  <div class="domains-header">
+    <div>
+      <h2 class="title">Domains</h2>
+    </div>
+    <div class="searchbar">
+      <input type="text" matInput [(ngModel)]="SearchDomain" placeholder="Search Domain">
+    </div>
+    <div>
+      <button mat-raised-button color="primary" class="crdomain" (click)="openAddDomains()">Create new domain</button>
+    </div>
+  </div>
+  <div class="domaincontainer">
+    <div class="flexcontainer" fxLayout="row wrap" fxLayoutGap="20px grid">
+      <div fxFlex.xl="25%" fxFlex.lg="25%" *ngFor="let domain of domains| filter:SearchDomain">
+        <mat-card appElevation class="cardstyle" (click)="routeToDomainStudio(domain.domainId)">
+          <img mat-card-image class="domainimg" src="{{domain.domainImage}}">
+          <mat-card-content class="content">
+            <h2>{{domain.domainName}}</h2>
+          </mat-card-content>
+          <mat-card-footer class="footer">
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

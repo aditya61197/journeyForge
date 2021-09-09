@@ -1,0 +1,110 @@
+<mat-sidenav-container class="example-sidenav-container">
+  <mat-sidenav #snav mode="side" opened>
+
+    <div class="domain-details">
+      <div class="img-wrapper">
+        <div class="domain-img-div">
+          <img class="domain-img" src={{domain.domainImage}}>
+        </div>
+      </div>
+      <div class="domain-contents">
+        <div class="domain-name">{{domain.domainName}}</div>
+        <div class="domain-desc">{{domain.domainDescription}}</div>
+      </div>
+      <div class="tags">
+        <h3 class="tags-head">Tags</h3>
+        <mat-chip-list class="example-chip" cdkDropList cdkDropListOrientation="horizontal">
+          <mat-chip class="chips" cdkDrag *ngFor="let tag of domain.tags">
+            {{tag}}
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+  </mat-sidenav>
+
+
+  <div class="main-content">
+    <div class="journeytree-header">
+      <div>
+        <h2>Journey </h2>
+
+      </div>
+    </div>
+    <app-like></app-like>
+    <div class="example-label">
+      <mat-icon (click)="downloadGraph()" matTooltip="Download Graph" id="download-icon">get_app
+      </mat-icon>
+      <!--<button (click)="enlargeIt()" mat-raised-button color="primary">Enlarge graph</button>-->
+      <mat-icon *ngIf="!enlarged" (click)="enlargeIt()" matTooltip="Enlarge graph" id="enlargeIcon">fullscreen
+      </mat-icon>
+      <mat-icon *ngIf="enlarged" (click)="exitLarge()" matTooltip="Contract Graph Window" id="exitlargeIcon">
+        fullscreen_exit</mat-icon>
+    </div>
+    <div class="sidebar" id="box">
+
+      <ngx-graph class="chart-container" layout="dagre" [links]="hierarchialGraph.links" [view]="[2000,2000]"
+        [nodes]="hierarchialGraph.nodes" [autoCenter]="false" [panningEnabled]="true" [enableZoom]="true"
+        [zoomSpeed]="0.1" [minZoomLevel]="0.6" [maxZoomLevel]="3.0"  [legend]="false" [curve]="curve"
+        [draggingEnabled]="true" xmlns:svg="http://www.w3.org/2000/svg" [update$]="update$">
+
+        <ng-template #defsTemplate>
+          <svg:marker id="arrow" viewBox="0 -5 10 10" refX="8" refY="0" markerWidth="7" markerHeight="5.2" orient="auto">
+            <svg:path d="M0,-5L10,0L0,5" class="arrow-head" />
+          </svg:marker>
+        </ng-template>
+
+        <ng-template #nodeTemplate let-node>
+          <svg:g class="node" id="node" (click)="openDialog(node)" tooltip={{node.label}} placement="top">
+            <svg:rect [attr.rx]="10" [attr.ry]="10"  [attr.width]="node.dimension.width*1" [attr.height]="node.dimension.height*1.1" [attr.fill]="node.data.customColor"/>
+            <svg:text alignment-baseline="central" [attr.fill]="node.data.fontColor" [attr.x]="10" [attr.y]="node.dimension.height / 1.6">{{node.label}}
+            </svg:text>
+          </svg:g>
+
+        </ng-template>
+
+        <ng-template #linkTemplate let-link>
+          <svg:g class="edge">
+            <svg:path class="line" id="lines" stroke-width="1" marker-end="url(#arrow)">
+            </svg:path>
+            <svg:text class="edge-label" text-anchor="middle">
+              <textPath style="fill: #666;" [attr.href]="'#' + link.id" startOffset="60%">
+                {{link.label}}
+              </textPath>
+            </svg:text>
+          </svg:g>
+        </ng-template>
+
+      </ngx-graph>
+      <div id="info" class="info">
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="collapse-menus">
+    <div>
+      <a (click)="snav.toggle()" mat-list-item>
+        <img *ngIf="!snav.opened" class="collapse-icon" src="assets/chevrons-right.svg">
+        <img *ngIf="snav.opened" class="collapse-icon" src="assets/chevrons-left.svg">
+      </a>
+    </div>
+
+  </div> -->
+
+</mat-sidenav-container>
+
+
+
+<!--(mouseover)="arrowBlink($event)" (mouseout)="arrowDown($event)"-->
+
+
+
+
+
+
+<!--ngx-tooltip
+    [tooltipPlacement]="'top'"
+    [tooltipType]="'tooltip'"
+    [tooltipTitle]="node.position"-->

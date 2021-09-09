@@ -1,0 +1,27 @@
+<main class="main">
+  <div class="carousel">
+    <app-carousel></app-carousel>
+  </div>
+  <div class="container">
+    <h1 class="title1">What are you interested in?</h1>
+    <div class="inputcls">
+      <input type="text" autocomplete="off" matInput class="searchbar" [(ngModel)]="filterTerm" placeholder="Search">
+      <button *ngIf="!filtered" class="recommend-btn" (click)="openDialog()">Filter</button>
+      <button *ngIf="filtered" class="recommend-btn" (click)="clearFilter()">Clear</button>
+    </div>
+  </div>
+  <div class="container1">
+  <div class="container2" fxLayout="row wrap" fxLayoutGap="20px grid">
+    <div fxFlex.lg="25%" fxFlex.xl="25%" *ngFor="let domain of domains | filter:filterTerm">
+      <mat-card class="cardstyle" appElevation (click)="goToJourneyGraph(domain.domainId)">
+        <img mat-card-image class="domainimg" src="{{domain.domainImage}}">
+        <mat-card-content class="content">
+          <h2>{{domain.domainName}}</h2>
+        </mat-card-content>
+        <mat-card-footer class="footer">
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+  </div>
+</main>

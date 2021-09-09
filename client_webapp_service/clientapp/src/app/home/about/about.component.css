@@ -1,0 +1,50 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #4F86C6;
+    margin-bottom: 50px;
+}
+.pagetitle{
+    font-family: "AlegreyaBlack";
+    font-size:1.5rem;
+    color:white;
+}
+h2{
+    font-family: "HindGuntur";
+    font-size:x-large;
+    color:#1C2541;
+}
+.container{
+    overflow: hidden;
+}
+.devlist{
+    margin-right:20px;
+    justify-content: center;
+}
+
+.devcards{
+    color: #1C2541;
+    background-size: cover;
+    height: 270px;
+    width: 250px;
+    
+    
+}
+element.style{
+    margin:0px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+img.devimg{
+    height:200px;
+    max-width:200px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

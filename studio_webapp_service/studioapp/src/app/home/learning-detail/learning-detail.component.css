@@ -1,0 +1,169 @@
+.node-specs
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.row1
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* background-color: yellow; */
+}
+
+.row2
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    /* background-color: gray; */
+}
+
+h3
+{
+    font-weight: 500;
+    border-bottom: 2px solid #ccc;
+}
+
+.duration
+{
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 10px 10px 10px 0px;
+}
+
+.concepts
+{
+    margin: 10px;
+    width: 300px;
+
+}
+
+.courses
+{
+    margin: 10px;
+
+}
+
+.courses-list
+{
+    width: 200px;
+    margin: 10px 0px 0px 0px;
+    padding: 0px 1em;
+    line-height: 1.75;
+}
+
+.highlight
+{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.days
+{
+    margin-left: 10px;
+    font-size: 0.65em;
+    font-weight: 400;
+    color: #888;
+}
+
+.level-text
+{
+    align-self: center;
+}
+
+.level-signal
+{
+    padding-right: 25px;
+    margin-right: 20px;
+    border-right: 2px solid #bbb;
+}
+
+.level-detail
+{
+    display: flex;
+    align-items: center;
+    border-right: #888;
+}
+
+.signal
+{
+    display: flex;
+    align-items: flex-end;
+    width: 60px;
+    justify-content: space-between;
+}
+
+.bar1-beginner
+{
+    width: 17px;
+    height: 25px;
+    background-color: rgb(90, 165, 235);
+}
+
+.bar2-beginner
+{
+    width: 17px;
+    height: 50px;
+    background-color: #bbb;
+
+}
+
+.bar3-beginner
+{
+
+    width: 17px;
+    height: 75px;
+    background-color: #bbb;
+}
+
+.bar1-intermediate
+{
+    width: 17px;
+    height: 25px;
+    background-color: rgb(53, 201, 102);
+}
+
+.bar2-intermediate
+{
+    width: 17px;
+    height: 50px;
+    background-color: rgb(53, 201, 102);
+
+}
+
+.bar3-intermediate
+{
+
+    width: 17px;
+    height: 75px;
+    background-color: #bbb;
+}
+
+
+.bar1-expert
+{
+    width: 17px;
+    height: 25px;
+    background-color: rgb(212, 166, 39);
+}
+
+.bar2-expert
+{
+    width: 17px;
+    height: 50px;
+    background-color: rgb(212, 166, 39);
+
+}
+
+.bar3-expert
+{
+
+    width: 17px;
+    height: 75px;
+    background-color: rgb(212, 166, 39);
+}

@@ -1,0 +1,169 @@
+
+<div class="user-profile-header">
+<h2>User Profile</h2>
+</div>
+<div class="wrapper">
+    <div class="left">
+        <img src="{{user.picture}}" 
+        alt="user" width="100">
+        <h4>{{user.name}}</h4>
+         <p>{{user.userrole}}</p>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Contact Information <button class="btn" mat-raised-button (click)="openDialog()" ><mat-icon class="img"><img src="assets/edit.svg"></mat-icon></button></h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4>Email</h4>
+                    <p>{{user.emailid}}</p>
+                    <h4>Address</h4>
+                    <p>{{user.address}}</p>
+                 </div>
+                 <div class="data">
+                   <h4>Phone</h4>
+                    <p>{{user.phoneNo}}</p>
+              </div>
+            </div>
+        </div>
+      
+      <div class="projects">
+            <h3>Personal Information</h3>
+            <div class="projects_data">
+                 <div class="data">
+                    <h4>Date Of Birth</h4>
+                    <p>{{user.dob}}</p>
+                 </div>
+                 <div class="data">
+                   <h4>Gender</h4>
+                    <p>{{user.gender}}</p>
+              </div>
+            </div>
+        </div>
+      
+        <div class="journey-data">
+            <div class="data">
+                <h4>Qualifications</h4>
+                <mat-chip-list> 
+                    <mat-chip *ngFor="let value of user.qualifications">
+               {{value}}</mat-chip> </mat-chip-list>
+             </div>
+             <br>
+             <div class="data">
+               <h4>Interests</h4>
+               <mat-chip-list> 
+                <mat-chip *ngFor="let value of user.interests">
+           {{value}}</mat-chip> </mat-chip-list>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="Profile">
+    <mat-card class='ProfileCard'>
+        <mat-card-header>
+            <div mat-card-avatar>
+                <img src="{{origin}}/api/users/profile-image/{{user.profileImage}}" class="header-image">
+             </div>
+            <mat-card-title>{{user.name}}</mat-card-title>
+            <mat-card-subtitle>{{user.emailid}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>Username: {{user.name}}</p>
+            <p>Email: {{user.emailid}}</p>
+            <p>
+            <h2>Blog Entries of {{user.username}}</h2>
+        </mat-card-content>
+    </mat-card>
+</div> --> 
+
+        
+        <!-- <mat-form-field appearance="standard">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Placeholder" type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="name">
+          <mat-hint>Enter your full name</mat-hint>
+        </mat-form-field>
+
+<br>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Email Id</mat-label>
+      <input matInput placeholder="Placeholder" type="text" class="form-control" id="emailid" required [(ngModel)]="user.emailid" name="emailid" disabled>
+      <mat-hint>Enter your Email Id</mat-hint>
+    </mat-form-field>
+
+<br>
+    <mat-form-field appearance="standard">
+        <mat-label>Phone No</mat-label>
+        <input matInput placeholder="Placeholder" type="text" class="form-control" id="phoneNo" required [(ngModel)]="user.phoneNo" name="phoneNo">
+        <mat-hint>Enter your Phone No</mat-hint>
+      </mat-form-field>
+
+
+      <br>
+    <mat-form-field appearance="standard">
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Placeholder" type="text" class="form-control" id="address" required [(ngModel)]="user.address" name="address">
+        <mat-hint>Enter your Address</mat-hint>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" class="form-control" id="dob" required [(ngModel)]="user.dob" name="dob">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="standard">
+        <mat-label>Gender</mat-label>
+        <input matInput placeholder="Placeholder" type="text" class="form-control" id="gender" required [(ngModel)]="user.gender" name="gender">
+        <mat-hint>Enter your Gender</mat-hint>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-chip-list" appearance="fill">
+        <mat-label>Qualifications</mat-label>
+        <mat-chip-list #qualificationList>
+          <mat-chip *ngFor="let qualification of qualifications" [selectable]="selectable"
+                   [removable]="removable" (removed)="removeQualification(qualification)">
+            {{qualification}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="New qualification..."
+                 [matChipInputFor]="qualificationList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 [(ngModel)]="user.qualifications" name="qualifications"
+                 (matChipInputTokenEnd)="addQualification($event)">
+        </mat-chip-list>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-chip-list" appearance="fill">
+        <mat-label>Interests</mat-label>
+        <mat-chip-list #interestList>
+          <mat-chip *ngFor="let interest of interests" [selectable]="selectable"
+                   [removable]="removable" (removed)="removeInterest(interest)">
+            {{interest}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="New interest..."
+                 [matChipInputFor]="interestList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 [(ngModel)]="user.interests" name="interests"
+                 (matChipInputTokenEnd)="addInterest($event)">
+        </mat-chip-list>
+      </mat-form-field>
+      <br>
+
+      <button mat-raised-button color="primary">Submit</button>
+    </form>
+</div> -->

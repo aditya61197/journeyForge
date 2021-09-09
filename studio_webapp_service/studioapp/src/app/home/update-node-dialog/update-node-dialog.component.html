@@ -1,0 +1,142 @@
+<div class="example-container" >
+  <div class="heading-div">
+    <h2>Update Node</h2>
+  </div>
+  <form [formGroup]="updateNodeForm">
+    <mat-dialog-content class="mat-typography" >
+
+      <mat-form-field appearance="fill">
+        <mat-label>Node Category Name</mat-label>
+        <input matInput value={{nodeCategoryName}} disabled>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Node Name</mat-label>
+        <input matInput type="text" formControlName="nodeName">
+      </mat-form-field>
+
+  <!-- ===================================================== -->
+      <div *ngIf="nodeCategoryName.includes('Job')" [formGroup]="properties">
+          <mat-form-field appearance="fill">
+            <mat-label>Average Salary</mat-label>
+            <input matInput id="averageSalary" type="number" formControlName="averageSalary">
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Total Job Openings</mat-label>
+            <input matInput id="totalJobOpenings" type="number" formControlName="totalJobOpenings">
+          </mat-form-field>
+
+            <div formArrayName="requestedEducation">
+              <div *ngFor="let edu of requestedEducationFormArray['controls']; let i=index">
+                <div [formGroupName]="i" class="reqedu-full-block">  
+
+                  <mat-form-field appearance="fill" class="reqedu-name-block" >
+                    <mat-label>Requested Education</mat-label>
+                    <input matInput type="text" formControlName="name">
+                  </mat-form-field>
+            
+                  <mat-form-field appearance="fill" class="reqedu-percentage-block">
+                    <mat-label>%</mat-label>
+                    <input matInput type="number" formControlName="percentage">
+                  </mat-form-field>
+
+                  <div class="del-reqedu-btn-wrapper">
+                    <button (click)="deleteRequestedEducation(i)" color="warn" mat-fab class="del-reqedu-btn">
+                      <mat-icon class="del-icon">delete</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button (click)="addEducationDetail()" class="addreq-btn">+ &nbsp; Add Requested Education</button>
+            </div>
+              <!--  -->
+            <mat-form-field class="example-chip-list" appearance="fill">
+              <mat-label>Skills Requested</mat-label>
+              <mat-chip-list #skillList>
+                <mat-chip *ngFor="let skill of skillsRequested" [selectable]="selectable" [removable]="removable"
+                  (removed)="removeSkills(skill)">
+                  {{skill}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                  <input placeholder="Skills" [matChipInputFor]="skillList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="addSkills($event)">
+              </mat-chip-list>
+            </mat-form-field>
+              
+            <mat-form-field class="example-chip-list" appearance="fill">
+              <mat-label>Common Job Titles</mat-label>
+              <mat-chip-list #jobTitleList>
+                <mat-chip *ngFor="let jobTitle of jobTitles" [selectable]="selectable" [removable]="removable"
+                  (removed)="removeJobTitle(jobTitle)">
+                  {{jobTitle}}
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="Job Titles" [matChipInputFor]="jobTitleList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="addJobTitle($event)">
+              </mat-chip-list>
+            </mat-form-field>
+      </div>
+     <!-- =========================================== -->
+      <div *ngIf="nodeCategoryName.includes('Learning')" class="jobCategory"  formGroupName="properties">
+        <mat-form-field appearance="fill">
+          <mat-label>Level</mat-label>
+          <mat-select formControlName="level">
+            <mat-option value="Beginner">Beginner</mat-option>
+            <mat-option value="Intermediate">Intermediate</mat-option>
+            <mat-option value="Expert">Expert</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-chip-list" appearance="fill">
+          <mat-label>Concepts</mat-label>
+          <mat-chip-list #conceptsList>
+            <mat-chip *ngFor="let concept of concepts" [selectable]="selectable"
+                          [removable]="removable" (removed)="remove(concept)">
+                  {{concept}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+              <input placeholder="Concepts"
+                      [matChipInputFor]="conceptsList"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                      [matChipInputAddOnBlur]="addOnBlur"
+                      (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+        </mat-form-field>
+
+        <div formArrayName="courses">
+          <div class="single-course" *ngFor="let course of coursesFormArray['controls']; let i=index">
+            <div [formGroupName]="i" class="course-full-block">
+              <div class="course-headers">
+                <h3 class="course-i">Course {{i+1}}</h3>
+                <button (click)="deleteCourse(i)" color="warn" mat-fab class="del-course-btn">
+                  <mat-icon class="del-icon">delete</mat-icon>
+                </button>
+              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Course Name</mat-label>
+                <input matInput type="text" formControlName="name">
+              </mat-form-field>        
+              <mat-form-field appearance="fill" class="reqedu-percentage-block">
+                <mat-label>Link</mat-label>
+                <input matInput type="text" formControlName="link">
+              </mat-form-field>     
+              <mat-form-field appearance="fill" class="reqedu-percentage-block">
+                <mat-label>Duration (in days)</mat-label>
+                <input matInput type="number" formControlName="duration">
+              </mat-form-field>        
+            </div>        
+          </div>
+          <button (click)="addCourse()" class="addcourse-btn">+ &nbsp; Add Course</button>
+        </div>
+      </div>
+    <!-- =============================================== -->
+      </mat-dialog-content>
+     
+      <div class="update-btn" align="end" >
+        <mat-divider></mat-divider>
+      <button class="upd-btn" mat-raised-button color="primary" [disabled]="!updateNodeForm.valid" (click)="onSubmit($event)" >Update Changes</button>
+    </div>
+    </form> 
+</div>
+  

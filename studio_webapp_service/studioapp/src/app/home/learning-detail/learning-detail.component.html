@@ -1,0 +1,89 @@
+<div class="learning-category">
+
+    <div class="node-specs">
+
+        <div class="row1">
+            <div class="duration-and-level">
+                <div class="duration">
+                    <h3>Average Learning Duration</h3>
+                    <p class="highlight">{{totalDuration}}<span class="days">(in days)</span></p>
+                </div>
+
+            </div>
+
+
+            <div class="concepts">
+                <h3>Concepts</h3>
+                <mat-chip-list class="example-chip" cdkDropList cdkDropListOrientation="horizontal">
+                    <div *ngIf="concepts.length!=0">
+                        <mat-chip class="example-box" cdkDrag *ngFor="let concept of concepts">
+                            {{concept}}
+                        </mat-chip>
+                    </div>
+                    <div *ngIf="concepts.length==0">
+                        <div>NA</div>
+                    </div>
+                </mat-chip-list>
+            </div>
+
+
+            <div class="courses">
+                <h3>Courses</h3>
+                <div *ngIf="courses[0]['name']!=''">
+                    <ul class="courses-list">
+                        <li *ngFor="let course of courses">
+                            <a href="{{course.link}}" target="_blank">{{course.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div *ngIf="courses[0]['name']==''">
+                    <div>NA</div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row2">
+
+            <div class="level">
+                <h3>Level</h3>
+
+                <div class="level-detail" *ngIf="level!=''" >
+
+                    <div class="level-signal">
+                        <div class="signal beginner" *ngIf="level=='Beginner'">
+                            <div class="bar1-beginner"></div>
+                            <div class="bar2-beginner"></div>
+                            <div class="bar3-beginner"></div>
+                        </div>
+
+                        <div class="signal intermediate" *ngIf="level=='Intermediate'">
+                            <div class="bar1-intermediate"></div>
+                            <div class="bar2-intermediate"></div>
+                            <div class="bar3-intermediate"></div>
+                        </div>
+
+                        <div class="signal expert" *ngIf="level=='Expert'">
+                            <div class="bar1-expert"></div>
+                            <div class="bar2-expert"></div>
+                            <div class="bar3-expert"></div>
+                        </div>
+                    </div>
+                    <div class="level-text">
+                        <h2>{{level}}</h2>
+                    </div>
+                </div>
+
+                <div *ngIf="level==''">
+                    <div>NA</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

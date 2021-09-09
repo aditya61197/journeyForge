@@ -1,0 +1,55 @@
+<div class="studio-component">
+  <div class="creator">
+    <div class="src">
+      <mat-form-field appearance="outline">
+
+        <mat-label>Select Source</mat-label>
+
+        <input placeholder="Pick one" type="text" matInput [formControl]="myControl" [matAutocomplete]="auto0">
+        <mat-autocomplete #auto0="matAutocomplete">
+
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option.nodeName"
+            (click)="pushToSource(option)">
+            {{option.nodeName}}
+          </mat-option>
+
+        </mat-autocomplete>
+
+      </mat-form-field>
+    </div>
+    <div class="target">
+      <mat-form-field appearance="outline">
+        <mat-label>Select target</mat-label>
+        <input placeholder="Pick one" type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option.nodeName"
+            (click)="pushToTarget(option)">
+            {{option.nodeName}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+
+    <div class="btns">
+      <button mat-raised-button color="secondary" (click)="pushToLinks()">RELATE NODES</button>
+    </div>
+    <div class="btn">
+      <button mat-icon-button  color="secondary" (click)="reset()"><mat-icon class="img"><img  src="assets/reset.svg"></mat-icon></button>
+    </div>
+    
+    <div class="update-btn">
+    <button mat-raised-button color="primary" *ngIf="hierarchialGraph.nodes.length != 0" (click)="saveGraph()">UPDATE
+      GRAPH</button>
+    <button mat-raised-button color="primary" *ngIf="hierarchialGraph.nodes.length == 0" (click)="saveGraph()">SAVE GRAPH</button>
+  </div>
+
+  </div>
+
+
+
+  <div class="graph">
+    <app-journeygraph [layout]="layouts" [zoomToFit$]="zoomToFit$" [hierarchialGraph]="hierarchialGraph" [update$]="update$"
+      [center$]="center$"></app-journeygraph>
+  </div>
+
+</div>

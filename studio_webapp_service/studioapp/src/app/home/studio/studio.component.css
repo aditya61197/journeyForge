@@ -1,0 +1,82 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap'); */
+
+
+.creator
+{ 
+  height: 20%;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 49px;
+  overflow-y: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+
+.src
+{
+  margin-right: 10px;
+}
+.target
+{
+  margin-right: 10px;
+}
+
+.graph
+{
+  width: 95%;
+  height: 78vh;
+  border: 1px solid #fafafa;
+  border-radius: 10px;
+  overflow-y: hidden;
+  margin-left: 49px ;
+  margin-top: 15px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 2px 2px rgba(103,58,183,0.5);
+ 
+}
+
+.btns
+{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.btn{
+  margin-top: 2px;
+  margin-left: 10px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.img{
+
+  width:60%;
+  height: 30%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.btns:hover
+{
+  background-color: rgb(10, 119, 10);
+  
+}
+
+.update-btn
+{
+
+margin-top: 10px;
+margin-right: 20px;
+position: absolute;
+right: 0;
+}
+
+.update-btn:hover
+{
+  background-color: rgb(14, 81, 156);
+}

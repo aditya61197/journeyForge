@@ -1,0 +1,70 @@
+<mat-sidenav-container class="example-sidenav-container">
+  <mat-sidenav #snav mode="side" opened>
+    <mat-nav-list>
+
+      <div class="main-menus">
+
+        <a class="back-button" (click)="goToDomains()" mat-list-item>
+          <div class="single-menu">
+            <div class="menu-icon"><img src="assets/arrow-left-circle.svg"></div>
+            <div class="menu-desc">Back</div>
+          </div>
+        </a>
+
+        <div class="domain-name">
+          <div class="domain-name-text">{{domainName}}</div>
+        </div>
+
+        <a (click)="goToNodes()" mat-list-item>
+          <div class="single-menu">
+            <div class="menu-icon"><img src="assets/box.svg"></div>
+            <div class="menu-desc">Nodes</div>
+          </div>
+        </a>
+
+        <a (click)="goToNodeCategories()" mat-list-item>
+          <div class="single-menu">
+            <div class="menu-icon"><img src="assets/server.svg"></div>
+            <div class="menu-desc">Node Categories</div>
+          </div>
+        </a>
+
+        <a (click)="goToJourneyView()" mat-list-item>
+          <div class="single-menu">
+            <div class="menu-icon"><img src="assets/journey.png" width="25px" height="30px"></div>
+            <div class="menu-desc">Journey</div>
+          </div>
+        </a>
+
+        <a (click)="goToStudioComponent()" mat-list-item>
+          <div class="single-menu">
+            <div class="menu-icon"><img src="assets/settings.svg" width="25px" height="30px"></div>
+            <div class="menu-desc">Studio</div>
+          </div>
+        </a>
+
+       
+
+      </div>
+
+
+
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+
+  <router-outlet></router-outlet>
+
+  <div class="collapse-menus">
+    <div>
+      <a (click)="snav.toggle()" mat-list-item>
+        <img *ngIf="!snav.opened" class="collapse-icon" src="assets/chevrons-right.svg">
+        <img *ngIf="snav.opened" class="collapse-icon" src="assets/chevrons-left.svg">
+      </a>
+    </div>
+
+  </div>
+
+</mat-sidenav-container>

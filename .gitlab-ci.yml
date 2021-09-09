@@ -1,0 +1,75 @@
+stages:
+  - build
+  - lint
+  - release
+
+
+cache:
+  key: build-cache
+  paths:
+    - .m2/
+
+variables:
+  DEPLOY_BRANCH: $CI_COMMIT_REF_NAME
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2"
+  
+# #Angular Build
+# build_studio_webapp:
+#   image: node:12-alpine
+#   stage: build
+#   when: always
+#   script:
+#     - cd studio_webapp_service/studioapp
+#     - npm install
+#     - npm run build:dev
+#   only:
+#     - /^feature_*/
+
+# build_client_webapp:
+#   image: node:12-alpine
+#   stage: build
+#   when: always
+#   script:
+#     - cd client_webapp_service/clientapp
+#     - npm install
+#     - npm run build:dev
+#   only:
+#     - /^feature_*/
+
+# # # #Spring boot Build
+# maven-build:
+#   image: maven:3.6.0-jdk-11
+#   stage: build
+#   when: always
+#   script:
+#     - mvn compile
+#   only:
+#     - /^feature_*/
+
+
+# #Java pmd
+pmd_check:
+  image: maven:3.6.0-jdk-11
+  stage: lint
+  when: always
+  script:
+    - mvn pmd:check -X
+  only:
+    - /^feature_*/
+
+release_deploy:
+  image: ubuntu:latest
+  stage: release
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'   
+  script:
+    - ls -ltr
+    - /bin/sh .gitlab-deploy.sh   
+  environment:
+    name: release
+  when: always
+  only:
+    - release_3.0.0

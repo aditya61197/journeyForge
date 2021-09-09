@@ -1,0 +1,104 @@
+
+.carousel{
+    display: flexbox;
+    margin-bottom: 50px;
+    background-color:white;
+}
+
+.container{
+    padding: 0px;
+    background-size: cover;
+    justify-content: center;
+    
+}
+
+.container>h1{
+    display: flex;
+    justify-content: center;
+    font-size:xx-large;
+    color: #1C2541;
+    font-family: "AlegreyaBlack";
+}
+
+.searchbar{
+    margin :30px 0px;
+    padding:10px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    cursor: text;
+    width: calc(100% - 134px);
+    max-width: 549px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #1C2541;
+    border-radius: 100px;
+    outline: none;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 30%);
+}
+
+.inputcls
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.inputcls > .searchbar:focus{
+    border: 3px solid #1C2541;
+    display: flexbox;
+}
+
+.recommend-btn
+{
+    margin-left: 2em;
+    /* height: 2em; */
+    padding: 11px 20px;
+    font-weight: 600;
+    border: 3px solid #1C2541;
+    font-size: 1em;
+    color: #1C2541;
+    background-color: white;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 30%);
+
+    border-radius: 30px;
+}
+
+.recommend-btn:hover
+{
+    background-color: #1C2541;
+    color: white;
+}
+
+.container1{
+    overflow:hidden;
+    width: 80%;
+    margin:auto;
+}
+
+.container2{
+    padding: 0px;
+    display: block;
+    justify-content: center;
+}
+
+.cardstyle{
+    color: #1C2541;
+    background-size: cover;
+    cursor: pointer;
+    height: 220px;
+    width: 250px;
+}
+
+img.domainimg{ 
+    height: 180px;
+    max-width: 300px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+

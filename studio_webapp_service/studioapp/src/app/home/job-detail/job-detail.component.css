@@ -1,0 +1,99 @@
+
+h3
+{
+    font-weight: 500;
+    border-bottom: 2px solid #ccc;
+}
+
+.node-specs
+{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap; 
+    align-items: none;
+    justify-content: center;
+
+}
+
+.row1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* background-color: #ccc; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+}
+
+.row2
+{
+    margin-top: 1em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5px;
+    /* background-color: green; */
+}
+
+.reqedu
+{
+    /* background-color: gray; */
+    width: 400px;
+}
+
+.job-openings
+{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 10px 10px 10px 0px;
+    padding: 20px 20px;
+}
+
+.average-salary
+{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 10px 10px 10px 0px;
+    padding: 20px 20px;
+}
+
+.highlight
+{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.skills
+{
+    margin: 10px 10px;
+    padding: 10px;
+    width: 300px;
+    /* background-color: gray; */
+}
+
+.jobtitles
+{
+    /* background-color: yellow; */
+    margin: 10px 10px;
+    padding: 10px;
+
+}
+
+.jobtitles > h3
+{
+    margin: 0;
+}
+
+.job-title-list
+{
+
+    /* list-style; */
+    margin: 10px 0px 0px 0px;
+    padding: 0px 1em;
+    line-height: 1.75;
+    /* background-color: gray; */
+}
+
+
+
+

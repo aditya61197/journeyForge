@@ -1,0 +1,66 @@
+.cardstyle {
+  color: #04000a;
+  background-size: cover;
+  margin: 20px;
+  width: 250px;
+  height: 220px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.domaincontainer {
+  overflow: hidden;
+  display: block;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+
+.flexcontainer {
+  display: block;
+}
+
+.domainimg {
+  max-width: 300px;
+  height: 180px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  height: 100%;
+  width: 100%;
+  margin: 10px auto;
+  padding-left: 30px;
+}
+
+.domains-header {
+  border-bottom: 2px solid #673ab7;
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.searchbar {
+  margin: 8px auto;
+  padding: 5px;
+  padding-left: 10px;
+  cursor: text;
+  background-color: rgb(250, 243, 243);
+  border: 3px solid #0a0a0a;
+  border-radius: 4px;
+  width: 40%;
+  height: 100%;
+  justify-content: center;
+}
+
+.crdomain {
+  margin: 8px auto;
+  right: 100%;
+  height: 90%;
+  width: 100%;
+}

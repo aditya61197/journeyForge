@@ -1,0 +1,34 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <img (click)="goToDomains()" class="logo" style=" width: 40; margin-left: 0%;" src="assets/logotree.png">
+    <h1 (click)="goToDomains()"class="example-app-name">JOURNEY FORGE</h1>
+    <button style="position: absolute; right: 200px; background-color:#673ab7;" mat-icon-button
+      [matMenuTriggerFor]="menu">
+
+      <div class="grid-Container">
+        <div class="circle" [ngStyle]="{ 'background-color': circleColor }">
+          <img class="userpic" *ngIf="!showInitials" src="{{userPicture}}">
+          <div *ngIf="showInitials" class="initials">
+            {{ initials }}
+          </div>
+        </div>
+
+        <div><Span style="color: white; ">
+            {{userName}}</Span>
+        </div>
+      </div>
+
+    </button>
+  </mat-toolbar>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="goToProfile()">
+      <span>Profile</span>
+    </button>
+    <button mat-menu-item (click)="logoutUser()">
+      <span>Log Out </span>
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-menu>
+
+</div>

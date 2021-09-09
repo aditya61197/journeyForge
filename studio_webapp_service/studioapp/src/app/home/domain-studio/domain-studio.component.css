@@ -1,0 +1,83 @@
+.example-sidenav-container {
+  position: sticky !important;
+  top: 0 !important;
+  height:91vh;
+  background: white;
+}
+
+.mat-sidenav a:hover {
+  background-color: gainsboro;
+}
+.mat-sidenav {
+  width: 200px;
+}
+
+.single-menu
+{
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.menu-icon
+{
+  width: 25%;
+}
+
+.menu-desc
+{
+  width: 75%;
+}
+
+.back-button
+{
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.collapse-menus
+{
+  position: sticky;
+  cursor: pointer;
+  left: 0px;
+  bottom: 10px;
+  
+}
+
+.collapse-icon
+{
+  padding: 10px;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px 1px 1px 0px;
+  border-radius: 0px 5px 5px 0px;
+  margin: 0;
+}
+
+.collapse-icon:hover
+{
+  background-color: gainsboro;
+}
+
+.domain-name
+{
+  padding: 15px 25px;
+  background-color: #673ab710;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-right: 5px solid #673ab7;
+}
+
+.domain-name-text
+{
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-weight: 500;
+  color: #673ab7;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+

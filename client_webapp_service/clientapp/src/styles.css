@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "AlegreyaBold";
+    src: local("AlegreyaBold"), url(assets/fonts/Alegreya_Sans/AlegreyaSans-ExtraBold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "AlegreyaBlack";
+    src: local("AlegreyaBlack"), url(assets/fonts/Alegreya_Sans/AlegreyaSans-Medium.ttf) format("truetype");
+}
+@font-face {
+    font-family: "HindGuntur";
+    src: local("HindGuntur"), url(assets/fonts/Alegreya_Sans/HindGuntur-Medium.ttf);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

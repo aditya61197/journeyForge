@@ -1,0 +1,16 @@
+<div class="node-detail-dialog-comp">
+    
+    <div class="height-controller">
+        <h2>{{node.nodeName}}</h2>
+        
+
+        <div *ngIf="nodeCategoryName.includes('Job')">
+            <app-job-detail [node]="node"></app-job-detail>
+        </div>
+
+        <div *ngIf="nodeCategoryName.includes('Learning')">
+            <app-learning-detail [node]="node"></app-learning-detail>
+        </div>
+
+    </div>
+</div>

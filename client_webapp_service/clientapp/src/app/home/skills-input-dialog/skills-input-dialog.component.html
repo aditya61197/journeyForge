@@ -1,0 +1,22 @@
+<div class="skills-input-dialog">
+
+    <h2>What are your interests?</h2>
+
+    <mat-form-field class="example-chip-list" appearance="fill">
+        <mat-label>Enter your interests</mat-label>
+        <mat-chip-list #chipList>
+            <mat-chip *ngFor="let interest of interests" [selectable]="selectable" [removable]="removable"
+                (removed)="remove(interest)">
+                {{interest}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="Interests" [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+    </mat-form-field>
+
+
+    <button [mat-dialog-close]="interests" mat-raised-button color="primary"><mat-icon>filter_alt</mat-icon>Filter Domains</button>
+</div>
+

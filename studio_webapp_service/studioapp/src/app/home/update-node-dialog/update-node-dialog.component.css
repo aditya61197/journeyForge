@@ -1,0 +1,150 @@
+/* .example-container .mat-form-field + .mat-form-field {
+   
+  } */
+  
+  .mat-typography{
+    /* padding-left: 50px; */
+    padding-right:5%;
+  }
+  .reqedu-full-block
+  {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .reqedu-name-block{
+      width:60%
+  }
+
+  .reqedu-percentage-block{
+      width:20%
+  }
+  
+  .course-full-block{
+    justify-content: center;
+  }
+
+  .course-full-block>.mat-form-field{
+    width: 100%;
+  }
+  mat-form-field
+  {
+      padding-left: 0%;
+      width: 100%;
+  }
+
+  .courses
+{
+    width: 100%;
+}
+
+  .single-course
+{
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+ /* .jobCategory>mat-form-field{
+    padding-left: 0%;
+    width: 100%;
+ } */
+.addreq-btn{
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    /* font-weight: 600; */
+    font-size: inherit;
+    background: #673ab70a;
+    color: #673ab7;
+    border: 2px solid #673ab7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.addcourse-btn
+{
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    /* font-weight: 600; */
+    font-size: inherit;
+    background: #673ab70a;
+    color: #673ab7;
+    border: 2px solid #673ab7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addcourse-btn:hover
+{
+    color: white;
+    background: #673ab7;
+}
+
+.addreq-btn:hover
+{
+    color: white;
+    background: #673ab7;
+}
+
+.course-i
+{
+    color: #555;
+}
+.example-chip-list
+{
+    width: 100%;
+}
+
+.del-icon
+{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.del-course-btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.course-headers
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 20px 0px;
+
+}
+
+.del-reqedu-btn-wrapper
+{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.34375em;
+}
+
+.del-reqedu-btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.update-btn{
+    padding-top:2%;
+    padding-right:4%;
+}
+
+mat-divider{
+    padding: 1%;
+}

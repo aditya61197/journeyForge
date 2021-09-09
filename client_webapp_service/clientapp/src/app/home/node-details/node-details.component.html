@@ -1,0 +1,27 @@
+
+<!--<h1 mat-dialog-title>Dialog with elements</h1>
+<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.
+  <app-learning-category-view></app-learning-category-view>
+</div>
+<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.
+  <app-job-category-view></app-job-category-view>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>-->
+<div class="node-detail-dialog-comp">
+    
+  <div class="height-controller">
+      <h2>{{node.nodeName}}</h2>
+      
+
+      <div *ngIf="nodeCategoryName.includes('Job')">
+          <app-job-category-view [node]="node"></app-job-category-view>
+      </div>
+
+      <div *ngIf="nodeCategoryName.includes('Learning')">
+          <app-learning-category-view [node]="node"></app-learning-category-view>
+      </div>
+
+  </div>
+</div>

@@ -1,0 +1,163 @@
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z])
+{
+  box-shadow: none;
+  border-radius: 30px;
+}
+
+.node-cate-indicator-symbol
+{
+  margin-right: 2em;
+  width: 2em;
+}
+
+.level-notifier-na
+{
+  width: 150px;
+  text-align: center;
+  padding: 5px 20px;
+  background-color: rgba(195, 108, 169, 0.15);
+  margin-right: 30px;
+  color: rgb(204, 7, 145);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.level-notifier-beginner
+{
+  width: 150px;
+  text-align: center;
+  padding: 5px 20px;
+  background-color: rgba(5, 133, 184, 0.150);
+  margin-right: 30px;
+  color: rgb(5, 133, 184);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.level-notifier-intermediate
+{
+  width: 150px;
+  text-align: center;
+  padding: 5px 20px;
+  background-color: rgba(53, 201, 102,0.150);
+  margin-right: 30px;
+  color: rgb(11, 139, 54);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.level-notifier-expert
+{
+  width: 150px;
+  text-align: center;
+  padding: 5px 20px;
+  background-color: rgba(212, 166, 39, 0.200);
+  margin-right: 30px;
+  color: rgb(168, 127, 12);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.job-indicator
+{
+  display: flex;
+  /* background-color: yellow; */
+}
+
+.average-salary
+{
+  width: 165px;
+  text-align: center;
+  border-radius: 5px;
+  color: #673ab7; 
+  background-color: #673ab720;
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 30px;
+  text-transform: uppercase;
+}
+
+.job-openings
+{
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(201, 88, 44); 
+  background-color: rgba(184, 118, 92, 0.2);
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 30px;
+  text-transform: uppercase;
+}
+
+mat-accordion
+{
+}
+
+mat-expansion-panel
+{
+  padding: 5px 0px;
+  background-color: rgb(245, 245, 245);
+}
+
+mat-expansion-panel-header
+{
+  display: flex;
+  height: 60px;
+  /* background-color: gray; */
+  align-items: center;
+}
+
+.single-node
+{
+  margin-bottom: 10px;
+}
+
+mat-panel-title
+{
+  /* font-size: 20px; */
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #555;
+}
+
+mat-panel-description
+{
+  /* font-size: 20px; */
+  display: flex;
+  align-items: center;
+}
+
+
+h3
+{
+  font-weight: 500;
+}
+
+.node-details
+{
+  height: fit-content;
+  width: fit-content;
+}

@@ -1,0 +1,8 @@
+.mat-form-field{
+    width: 100%;
+    display:block;
+}
+.mat-dialog-actions {
+    justify-content: flex-end;
+    align-items: flex-end;
+}

@@ -1,0 +1,9 @@
+[
+  {id: 'start', label: '12th', position: 'x0'},
+  {id: '1', label: 'BCA', position: 'x1'},
+  {id: '2', label: 'Btech', position: 'x2'},
+  {id: '3', label: 'MCA', position: 'x3'},
+  {id: '4', label: 'Mtech', position: 'x4'},
+  {id: '5', label: 'Full stack developer', position: 'x5'},
+  {id: '6', label: 'Product engineer', position: 'x6'}
+]

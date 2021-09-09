@@ -1,0 +1,17 @@
+.node-detail-dialog-comp
+{
+    padding: 5px 15px;
+}
+
+
+.height-controller
+{
+    max-height: auto;
+    overflow-y: visible;
+}
+
+h2
+{
+    border-bottom: 2px solid #ccc;
+
+}

@@ -1,0 +1,15 @@
+
+  .graphstyle
+  {
+    height: 70vh;
+    overflow: hidden;
+    margin-top: 25px; 
+    /* margin-left: 50px; */
+    
+    
+    
+  }
+  .graph .edge {
+    stroke: #666;
+    fill: none; }
+  

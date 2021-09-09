@@ -1,0 +1,30 @@
+.skills-input-dialog
+{
+    padding: 20px 10px;
+}
+
+h3
+{
+    margin-bottom: 1em;
+
+}
+
+mat-form-field
+{
+    width: 100%;
+    margin-bottom: 1em;
+
+}
+
+button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-icon
+{
+    margin-right: 10px;
+    font-size: 20px;
+}

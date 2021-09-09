@@ -1,0 +1,54 @@
+<form [formGroup]="createNodeForm">
+
+    <div class="height-controller">
+        
+        <div class="heading-div">
+            <h2>Creating Node</h2>
+            <p>Fill in the node details</p>
+        </div>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Node Name</mat-label>
+            <input matInput type="text" formControlName="nodeName">
+        </mat-form-field>
+
+        <!-- <mat-form-field appearance="fill">
+        <mat-label>Domain</mat-label>
+        <mat-select formControlName="domainId">
+            <mat-option *ngFor="let domain of domains" [value]="domain.domainId">{{domain.domainName}}</mat-option>
+        </mat-select>
+    </mat-form-field> -->
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Node Category</mat-label>
+            <mat-select formControlName="nodeCategoryId">
+                <mat-option *ngFor="let nodeCategory of nodeCategories" [value]="nodeCategory.nodeCategoryId"
+                    (click)="passNodeCategoryName(nodeCategory.nodeCategoryName)">
+                    {{nodeCategory.nodeCategoryName}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div *ngIf="nodeCategoryName.includes('Job')">
+            <app-job-category [myForm]="createNodeForm"></app-job-category>
+        </div>
+
+        <div *ngIf="nodeCategoryName.includes('Learning')">
+            <app-learning-category [myForm]="createNodeForm"></app-learning-category>
+        </div>
+
+        <mat-form-field appearance="fill" style="display: none;">
+            <mat-label>Created By</mat-label>
+            <input matInput id="createdBy" type="text" formControlName="createdBy">
+        </mat-form-field>
+
+
+        <!-- For checking values -->
+        <!-- <div>
+        {{createNodeForm.value | json}}
+    </div> -->
+
+
+        <button class="create-btn" mat-raised-button color="primary" (click)="onSubmit($event)">Create</button>
+    </div>
+</form>

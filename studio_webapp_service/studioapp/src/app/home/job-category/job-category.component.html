@@ -1,0 +1,87 @@
+<div [formGroup]="properties" class="job-category">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Average Salary</mat-label>
+    <input matInput id="averageSalary" type="number" formControlName="averageSalary">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Total Job Openings</mat-label>
+    <input matInput id="totalJobOpenings" type="number" formControlName="totalJobOpenings">
+  </mat-form-field>
+
+  <!-- <mat-form-field class="example-chip-list" appearance="fill">
+    <mat-label>Requested Education</mat-label>
+    <mat-chip-list #eduList>
+      <mat-chip *ngFor="let education of requestedEducation" [selectable]="selectable" [removable]="removable"
+        (removed)="removeEducation(education)">
+        {{education}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="Education" [matChipInputFor]="eduList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+        (matChipInputTokenEnd)="addEducation($event)">
+    </mat-chip-list>
+  </mat-form-field> -->
+
+  <div formArrayName="requestedEducation">
+    <!-- <h2>Requested Education</h2> -->
+    <div *ngFor="let edu of requestedEducationFormArray.controls; let i=index">
+      <div [formGroupName]="i" class="reqedu-full-block">
+
+        <mat-form-field appearance="fill" class="reqedu-name-block">
+          <mat-label>Requested Education</mat-label>
+          <input (change)="typingEdu()" matInput type="text" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="reqedu-percentage-block">
+          <mat-label>%</mat-label>
+          <input (change)="typingEdu()" matInput type="number" formControlName="percentage">
+        </mat-form-field>
+
+        <div class="del-reqedu-btn-wrapper">
+          <button (click)="deleteRequestedEducation(i)" color="warn" mat-fab class="del-reqedu-btn">
+            <mat-icon class="del-icon">delete</mat-icon>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+    <button (click)="addEducationDetail()" class="addreq-btn">+ &nbsp; Add Requested Education</button>
+
+    <!-- <div>{{requestedEducationFormArray.value | json}}</div> -->
+
+  </div>
+
+
+
+  <mat-form-field class="example-chip-list" appearance="fill">
+    <mat-label>Skills Requested</mat-label>
+    <mat-chip-list #skillList>
+      <mat-chip *ngFor="let skill of skillsRequested" [selectable]="selectable" [removable]="removable"
+        (removed)="removeSkills(skill)">
+        {{skill}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="Skills" [matChipInputFor]="skillList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="addSkills($event)">
+    </mat-chip-list>
+  </mat-form-field>
+
+  <mat-form-field class="example-chip-list" appearance="fill">
+    <mat-label>Common Job Titles</mat-label>
+    <mat-chip-list #jobTitleList>
+      <mat-chip *ngFor="let jobTitle of jobTitles" [selectable]="selectable" [removable]="removable"
+        (removed)="removeJobTitle(jobTitle)">
+        {{jobTitle}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="Job Titles" [matChipInputFor]="jobTitleList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+        (matChipInputTokenEnd)="addJobTitle($event)">
+    </mat-chip-list>
+  </mat-form-field>
+
+
+</div>

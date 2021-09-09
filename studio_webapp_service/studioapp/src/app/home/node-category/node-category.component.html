@@ -1,0 +1,69 @@
+<div class="single-nodecategory">
+    <!-- <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{nodeCategory.nodeCategoryName}}
+                </mat-panel-title>
+
+
+            </mat-expansion-panel-header>
+
+            <div *ngFor="let prop of node.properties | keyvalue">
+            <h3>{{prop.key}}</h3>
+            <p>{{prop.value}}</p>
+          </div>
+
+        </mat-expansion-panel>
+    </mat-accordion> -->
+
+    <mat-card class="mat-card-active" *ngIf="nodeCategory['status'] == 'active' && nodeCategory.nodeCategoryName.includes('Learning')">
+
+        <div class="card-contents">
+            <img class="card-icon" src="assets/book-open.svg">
+            {{nodeCategory.nodeCategoryName}}
+        </div>
+
+    </mat-card>
+
+    <mat-card class="mat-card-dead" *ngIf="nodeCategory['status'] == 'dead' && nodeCategory.nodeCategoryName.includes('Learning')" (click)="activateCategory(nodeCategory)" >
+        
+        <div class="card-contents" >
+            <img class="card-icon" src="assets/book-open.svg">
+            {{nodeCategory.nodeCategoryName}}
+            <div class="dead-card-overlay">
+                +
+            </div>
+        </div>
+        
+    </mat-card>
+
+    <mat-card class="mat-card-active"  *ngIf="nodeCategory['status'] == 'active' && nodeCategory.nodeCategoryName.includes('Job')">
+
+        <div class="card-contents" >
+            <img class="card-icon" src="assets/briefcase.svg">
+            {{nodeCategory.nodeCategoryName}}
+        </div>
+
+    </mat-card>
+
+    
+    <mat-card class="mat-card-dead" *ngIf="nodeCategory['status'] == 'dead' && nodeCategory.nodeCategoryName.includes('Job')" (click)="activateCategory(nodeCategory)"> 
+
+        <div class="card-contents" >
+            <img class="card-icon" src="assets/briefcase.svg">
+            {{nodeCategory.nodeCategoryName}}
+            <div class="dead-card-overlay">
+                +
+            </div>
+        </div>
+        
+    </mat-card>
+
+
+            
+
+            
+
+
+</div>

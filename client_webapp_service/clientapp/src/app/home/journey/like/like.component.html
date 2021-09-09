@@ -1,0 +1,12 @@
+<div class="main">
+<div class="like-icon">
+<p>{{numberOfLikes}} likes</p>
+<!--<button (click)="likeButtonClick()">Like</button>-->
+  <mat-icon svgIcon="thumbs-up" aria-hidden="false" matTooltip="like the graph" aria-label="Example thumbs up SVG icon" (click)="likeButtonClick()"></mat-icon>
+ </div>
+<div class="share-icon">
+  <p>{{numberOfShares}} shares</p>
+  <mat-icon  (click)="shareButtonClick()"  matTooltip="share the graph" class="shareIcon" aria-hidden="false" >share</mat-icon>
+</div>
+</div>
+

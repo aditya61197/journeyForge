@@ -1,0 +1,69 @@
+.single-nodecategory
+{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    /* letter-spacing: 1px; */
+    font-weight: 500;
+}
+
+.mat-card-active
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(245, 245, 245);
+    margin: 10px 10px 10px 0px;
+}
+
+.mat-card-dead
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(245, 245, 245);
+    margin: 10px 10px 10px 0px;
+}
+
+.dead-card-overlay
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(39, 39, 39, 0.5);
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    border-radius: 5px;
+}
+
+mat-card:hover
+{
+    cursor: pointer;
+    background-color: rgb(225, 225, 225);
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+.card-contents
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-icon
+{
+    width: 30px;
+    margin-bottom: 1em;
+}

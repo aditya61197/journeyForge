@@ -1,0 +1,357 @@
+{ "data": [
+    {
+      "nodeName": "Digital Media Planner",
+      "totalJobOpenings": 4650690,
+      "skillsRequested": "Media Planning , Digital Media",
+      "averageSalary": 300000
+    },
+    {
+      "nodeName": "Online Bidding Executive",
+      "totalJobOpenings": 5840,
+      "skillsRequested": "pre sales, closing, software knowledge, clients, requirements, negotiating, client, online bidding, good communicatio, technology",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Trainee Research",
+      "totalJobOpenings": 68880,
+      "skillsRequested": "Computer science, Fabrication,  Quality check, Intellectual property, Electronics, Support services, Research, Management, Human resource management, Research Executive",
+      "averageSalary": 345000
+    },
+    {
+      "nodeName": "Technical Support",
+      "totalJobOpenings": 1290,
+      "skillsRequested": "Technical Support",
+      "averageSalary": 200000
+    },
+    {
+      "nodeName": "Software Test Engineer",
+      "totalJobOpenings": 1140,
+      "skillsRequested": "manual testing, test engineering, test cases, web testing, web technologies",
+      "averageSalary": 375000
+    },
+    {
+      "nodeName": "Adobe Analytics Specialist",
+      "totalJobOpenings": "",
+      "skillsRequested": "adobe experience manager, digital, digital marketing, adobe analytics, data analytics, aem, adobe, sitecatalyst",
+      "averageSalary": 700000
+    },
+    {
+      "nodeName": "Sales Fresher For Leading Property Consultant",
+      "totalJobOpenings": 10800,
+      "skillsRequested": "channel partners, real estate, negotiation, property, Residential Sales",
+      "averageSalary": 200000
+    },
+    {
+      "nodeName": "Azure Devops Architect",
+      "totalJobOpenings": 2710,
+      "skillsRequested": "TFS, Azure, Git, VSTS, Docker, DynaTrace, Splunk, AWS",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Bde",
+      "totalJobOpenings": 7720,
+      "skillsRequested": "Bde",
+      "averageSalary": 150000
+    },
+    {
+      "nodeName": "Technical Support",
+      "totalJobOpenings": 9480,
+      "skillsRequested": "technical support, support services, application support, communication skills, voice based process, semi voice, semi voice process",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Executive Assistant To Chairman",
+      "totalJobOpenings": 16930,
+      "skillsRequested": "secretary, executive assistant, ea",
+      "averageSalary": 2500000
+    },
+    {
+      "nodeName": "Seo Executive",
+      "totalJobOpenings": 4910,
+      "skillsRequested": "website, web analytics, xml, link building, google analytics, case studies, seo, social media, tracking, maintaining",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Workflow Coordinator",
+      "totalJobOpenings": 1790,
+      "skillsRequested": "operations, workflow, tat, monitoring, mts, email",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Oracle Idam",
+      "totalJobOpenings": 2710,
+      "skillsRequested": "Oracle IDAM,OIM,OAM",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Facebook Social Media Manager",
+      "totalJobOpenings": 600,
+      "skillsRequested": "digital marketing, seo, social media marketing, content marketing, email marketing, sem, google analytics, campaign management, facebook, media management",
+      "averageSalary": 350000
+    },
+    {
+      "nodeName": "Engineering",
+      "totalJobOpenings": 4660,
+      "skillsRequested": "instrumentation engineering, electrical engineering, Engineering, fresher, Trainee, immediate, Mechanical Engineering, electronics engineering, undergraduate",
+      "averageSalary": 450000
+    },
+    {
+      "nodeName": "Tooling",
+      "totalJobOpenings": 1190,
+      "skillsRequested": "Help Desk, Customer Service, customer relationship, access controls, Asset Management, Vendor Management",
+      "averageSalary": 325000
+    },
+    {
+      "nodeName": "Account Manager",
+      "totalJobOpenings": 15840,
+      "skillsRequested": "Report Generation, Policies, analytical, procedures, Analysts, Data Entry, analytical skills",
+      "averageSalary": 450000
+    },
+    {
+      "nodeName": "Magento Developer",
+      "totalJobOpenings": 7010,
+      "skillsRequested": "Copyright, Email, jQuery, XML, Javascript, CakePHP, Customer service, Open source, Facebook, CSS3",
+      "averageSalary": 450000
+    },
+    {
+      "nodeName": "Trained Freshers",
+      "totalJobOpenings": 2290,
+      "skillsRequested": "C#, MS Dynamics CRM, Microsoft Dynamics, ms dynamics",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Sales Manger",
+      "totalJobOpenings": 8380,
+      "skillsRequested": "sales manager, business development manager, relationship manager, brokers, insurance sales, channel sales, direct sale, direct marketing, sales, Marketing Executive, Territory Sales Manager",
+      "averageSalary": 325000
+    },
+    {
+      "nodeName": "Business Development",
+      "totalJobOpenings": 6610,
+      "skillsRequested": "lead generation, business development, corporate sales",
+      "averageSalary": 250000
+    },
+    {
+      "nodeName": "Business Development Manager Bdm",
+      "totalJobOpenings": 1250,
+      "skillsRequested": "contract management, closing, it services, relationship building, managed services, selling, market research, business development manager, sales",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Qa Executive",
+      "totalJobOpenings": 5950,
+      "skillsRequested": "QA Executive",
+      "averageSalary": 200000
+    },
+    {
+      "nodeName": "Back End Java Developer",
+      "totalJobOpenings": 7710,
+      "skillsRequested": "Java EE, JMS, Core Java, JUnit, Weblogic, HTML, JPA, JSON, SOAP, SQL",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Product Engineer",
+      "totalJobOpenings": 740,
+      "skillsRequested": "Conceptualization, Architecting, Continuous improvement, SIDE, development, Front end, it",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Articulate Tool Developer",
+      "totalJobOpenings": 80,
+      "skillsRequested": "Articulate Storyline",
+      "averageSalary": 400000
+    },
+    {
+      "nodeName": "Sales Manager",
+      "totalJobOpenings": 1300,
+      "skillsRequested": "Area Sales Management, Retail Sales, FMCG, Chocolate, confectionary, ASM, Area Sales Manager, area business manager",
+      "averageSalary": 420000
+    },
+    {
+      "nodeName": "Software Engineer",
+      "totalJobOpenings": 14050,
+      "skillsRequested": "C#, Java, OOP, C++, Multithreading, UML, OOAD, OOPS, .Net, debugging",
+      "averageSalary": 500000
+    },
+    {
+      "nodeName": "Linux Administrator Lead",
+      "totalJobOpenings": 1330,
+      "skillsRequested": "qmail, workflow, nagios, windows server, networking, mysql, monitoring, redhat, maintaining, centos",
+      "averageSalary": 450000
+    },
+    {
+      "nodeName": "Scrum Master",
+      "totalJobOpenings": 380,
+      "skillsRequested": "Java, JPA, Hibernate, Project Management, JDBC, Scrum Master, Microservices, Agile, SOAP, Rest",
+      "averageSalary": 300000
+    },
+    {
+      "nodeName": "Assistant Professor Grade I Theoretical Computer Science",
+      "totalJobOpenings": 7990,
+      "skillsRequested": "",
+      "averageSalary": 452000
+    },
+    {
+      "nodeName": "Java Api Engineers",
+      "totalJobOpenings": 4980,
+      "skillsRequested": "Java, java api, Banking, j2ee, API, finance, core java, microservices",
+      "averageSalary": 500000
+    },
+    {
+      "nodeName": "Strong Partner Ecosystem",
+      "totalJobOpenings": 190,
+      "skillsRequested": "GIS, ISO 27001, HR, information system, process, ISO 9001, Information security management, GIS software, Management, Edge",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Wordpress Web Developer",
+      "totalJobOpenings": 25540,
+      "skillsRequested": "",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Senior Executive Contract Logistics Bom Wp A",
+      "totalJobOpenings": 680,
+      "skillsRequested": "Administration, Administrative Support, Contract Logistics, Staff Development, Site Management, Quality Improvement, warehousing, Warehouse Operations",
+      "averageSalary": 550000
+    },
+    {
+      "nodeName": "Accounts Manager",
+      "totalJobOpenings": 330,
+      "skillsRequested": "filing, tds, service industry, pf, esi, returns, coaching, payroll, invoice, tally",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Technical Sales Executive",
+      "totalJobOpenings": 4910,
+      "skillsRequested": "Outbound, Antivirus, Technical support, Sales, Spot, Inbound calls, pay, Medical, Comp",
+      "averageSalary": 300000
+    },
+    {
+      "nodeName": "Nutanix Sme",
+      "totalJobOpenings": 8270,
+      "skillsRequested": "Troubleshooting, DNS, DHCP, Monitoring, Virtualization, Shell scripting, Python, VMS, Open source, Archiving",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "System Architect",
+      "totalJobOpenings": 8400,
+      "skillsRequested": "4G, 3GPP, 3G, System Architect, LTE, Radio Access Network, PhD, IEEE",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Linux Device Driver",
+      "totalJobOpenings": 380,
+      "skillsRequested": "arm processor,c,device drivers,embedded linux,linux kernel,ipc",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Java Developer",
+      "totalJobOpenings": 4530,
+      "skillsRequested": "JMS, Core Java, Sonar, Weblogic, XML, J2Ee, SVN, Spring, Oracle 11G, SQL",
+      "averageSalary": 1700000
+    },
+    {
+      "nodeName": "Regional Representative",
+      "totalJobOpenings": 7950,
+      "skillsRequested": "market, presentation, strong analytical skills, english, presentation skills, developing, customer interaction",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Hiring For Record To Report",
+      "totalJobOpenings": 13930,
+      "skillsRequested": "fixed assets, accounts payable, record to report, general accounting, general ledger",
+      "averageSalary": 400000
+    },
+    {
+      "nodeName": "Product Regional Sales Manager",
+      "totalJobOpenings": 0,
+      "skillsRequested": "Team management, Regional sales, Management",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Senior Manager",
+      "totalJobOpenings": 2000,
+      "skillsRequested": "Commercial Activities, Commercial Sales, Online Sales, Senior Management, Budgeting, Strategy Implementation, Marketing, E - commerce",
+      "averageSalary": 800000
+    },
+    {
+      "nodeName": "Odi Developer",
+      "totalJobOpenings": 2060,
+      "skillsRequested": "ODI, Matrix",
+      "averageSalary": 550000
+    },
+    {
+      "nodeName": "Ui Developer",
+      "totalJobOpenings": 20850,
+      "skillsRequested": "javascript, sql, php, php mysql, css, software development, technical, photoshop, mca, ajax, jquery, application, web, design, mysql, html",
+      "averageSalary": 575000
+    },
+    {
+      "nodeName": "Assistant Manager",
+      "totalJobOpenings": 2180,
+      "skillsRequested": "Relationship management, Relationship building, Client relationship, Training, Analytical skills, Process mapping, Standard operating procedures, Agile, Management, Visa processing",
+      "averageSalary": 1200000
+    },
+    {
+      "nodeName": "Android Developer",
+      "totalJobOpenings": 1710,
+      "skillsRequested": "android, btech, iphone, server, analytical, developing, ios, platforms, objective c, web, xml, design, json, programming, development, c, testing, mobile, xcode, application development, eclipse, application, sdk, applications",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "International Bpo",
+      "totalJobOpenings": 2400,
+      "skillsRequested": "cca, bpo, csr, international bpo, customer service, outbound process, customer care, tourism, customer support, fresher, voice process, inbound process, cse, bpo fresher, voice support, hotel, travel",
+      "averageSalary": 200000
+    },
+    {
+      "nodeName": "Ios Developer",
+      "totalJobOpenings": 8040,
+      "skillsRequested": "bca, graphics, application development, b tech, core, b sc, application, b e, ios, publishing, animation",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Process Excellence Lead",
+      "totalJobOpenings": 15140,
+      "skillsRequested": "Accounting, Continuous Improvement, Process Improvement, Load Balancing, Lean Six Sigma, Black Belt, Training, Green Belt, Process re - engineering, Process Excellence, Business Excellence, OTC",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "It Head",
+      "totalJobOpenings": 16690,
+      "skillsRequested": "networking, information technology, network administration, technical support, support services, license management, disaster recovery, data security, it training, it software",
+      "averageSalary": 1900000
+    },
+    {
+      "nodeName": "Digital Content Producer",
+      "totalJobOpenings": 49800,
+      "skillsRequested": "Automobile, Digital Content, Content Development, Production, Web Content Writing",
+      "averageSalary": 400000
+    },
+    {
+      "nodeName": "Manager Holidays",
+      "totalJobOpenings": 2050,
+      "skillsRequested": "Tourism, target achievement, negotiation skills, revenue management, Tour Packages",
+      "averageSalary": 1000000
+    },
+    {
+      "nodeName": "Backend Developer",
+      "totalJobOpenings": 1670,
+      "skillsRequested": "PHP, Networking, Data structures, HTTP, JSON, Software design, Computer science, System design, Backend, Ticketing",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Junior Big Data Analyst",
+      "totalJobOpenings": 3430,
+      "skillsRequested": "",
+      "averageSalary": ""
+    },
+    {
+      "nodeName": "Chief Engineer",
+      "totalJobOpenings": 8940,
+      "skillsRequested": "Chief Engineer, Hospitality, HVAC, Maintenance, Water Treatment, Energy Conservation, Capital Expenditure",
+      "averageSalary": ""
+    }
+  ]
+  }

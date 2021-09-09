@@ -1,0 +1,73 @@
+<div [formGroup]="properties" class="learning-category">
+
+  <!-- <mat-form-field appearance="fill">
+        <mat-label>Courses</mat-label>
+        <input matInput class="courses" name="co" type="text" formControlName="courses"  />
+        <mat-icon class="add-btn" (click)="addCourse()"><span class="material-icons plus">
+            add_circle
+            </span></mat-icon>
+        
+    </mat-form-field>
+
+    <span *ngFor="let course of coursesList">
+        <span class="single-course" (click)="removeCourse(course)" id={{course}}>{{course}}</span>
+    </span> -->
+
+  <mat-form-field appearance="fill">
+    <mat-label>Level</mat-label>
+    <mat-select formControlName="level">
+      <mat-option value="Beginner">Beginner</mat-option>
+      <mat-option value="Intermediate">Intermediate</mat-option>
+      <mat-option value="Expert">Expert</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-chip-list" appearance="fill">
+    <mat-label>Concepts</mat-label>
+    <mat-chip-list #conceptsList>
+      <mat-chip *ngFor="let concept of concepts" [selectable]="selectable" [removable]="removable"
+        (removed)="remove(concept)">
+        {{concept}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="Concepts" [matChipInputFor]="conceptsList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+        (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+  </mat-form-field>
+
+  <div formArrayName="courses">
+    <!-- <h2>Requested Education</h2> -->
+    <div class="single-course" *ngFor="let course of coursesFormArray.controls; let i=index">
+      <div [formGroupName]="i" class="reqedu-full-block">
+        <div class="course-headers">
+          <h3 class="course-i">Course {{i+1}}</h3>
+          <button (click)="deleteCourse(i)" color="warn" mat-fab class="del-course-btn">
+            <mat-icon class="del-icon">delete</mat-icon>
+          </button>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>Course Name</mat-label>
+          <input (change)="typingCourse()" matInput type="text" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="reqedu-percentage-block">
+          <mat-label>Link</mat-label>
+          <input (change)="typingCourse()" matInput type="text" formControlName="link">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="reqedu-percentage-block">
+          <mat-label>Duration (in days)</mat-label>
+          <input (change)="typingCourse()" matInput type="number" formControlName="duration">
+        </mat-form-field>
+
+      </div>
+
+    </div>
+    <button (click)="addCourse()" class="addcourse-btn">+ &nbsp; Add Course</button>
+
+    <!-- <div>{{requestedEducationFormArray.value | json}}</div> -->
+
+  </div>
+
+</div>

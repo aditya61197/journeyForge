@@ -1,0 +1,38 @@
+form
+{
+    padding: 20px;
+    /* overflow-x: hidden; */
+}
+
+.heading-div
+{
+    margin-bottom: 30px;
+}
+
+h2
+{
+    margin-bottom: 0px;
+}
+
+
+mat-form-field
+{
+    display: block;
+    
+}
+
+button
+{
+    margin-top: 10px;
+}
+
+.height-controller
+{
+    max-height: 500px;
+    overflow-y: visible;
+}
+
+.create-btn
+{
+    margin-bottom: 20px;
+}

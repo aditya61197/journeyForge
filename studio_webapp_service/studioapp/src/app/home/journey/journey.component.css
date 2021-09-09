@@ -1,0 +1,15 @@
+.example-sidenav-container {
+  
+    position: sticky!important;
+     top:0!important;
+      /* height:90vh; */
+    background:white; 
+  }
+  
+    .mat-sidenav a:hover {
+      background-color:gainsboro;
+    }
+    .mat-sidenav{
+     width: 200px;
+    }
+  

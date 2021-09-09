@@ -1,0 +1,76 @@
+<div class="job-category">
+
+    <div class="node-specs">
+
+        <div class="row1">
+
+            <div class="openings-and-salary">
+                <div class="job-openings">
+                    <h3>Total Job Openings</h3>
+                    <p *ngIf="node['properties']['totalJobOpenings']!=''" class="highlight">
+                        {{node['properties']['totalJobOpenings']}}</p>
+                    <p *ngIf="node['properties']['totalJobOpenings']==''" class="highlight">NA</p>
+                </div>
+                <div class="average-salary">
+                    <h3>Average Salary</h3>
+                    <p *ngIf="node['properties']['averageSalary'] != ''" class="highlight">₹
+                        {{node['properties']['averageSalary']}}</p>
+                    <p *ngIf="node['properties']['averageSalary'] == ''" class="highlight">₹ NA</p>
+                </div>
+            </div>
+
+            <div class="skills">
+
+                <h3>Skills Requested</h3>
+                <mat-chip-list class="example-chip" cdkDropList cdkDropListOrientation="horizontal">
+                    <div *ngIf="skillsRequested.length!=0">
+                        <mat-chip class="example-box" cdkDrag *ngFor="let skill of skillsRequested">
+                            {{skill}}
+                        </mat-chip>
+                    </div>
+
+                    <div *ngIf="skillsRequested.length==0">
+                        <div> Not Available</div>
+                    </div>
+                </mat-chip-list>
+            </div>
+
+            <div class="commonjobtitles">
+                <div class="jobtitles">
+                    <h3>Common Job Titles</h3>
+                    <div *ngIf="node['properties']['commonJobTitles'].length!=0">
+                        <ul class="job-title-list">
+                            <li *ngFor="let title of node['properties']['commonJobTitles']">{{title}}</li>
+                        </ul>
+                    </div>
+                    <div *ngIf="node['properties']['commonJobTitles'].length==0">
+                        <div>Not Available</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row2">
+            <div class="reqedu">
+                <h3>Requested Education</h3>
+                <div *ngIf="node['properties']['requestedEducation'][0]['name']!=''">
+                    <div style="display: block;">
+                        <canvas style="width: 35%;" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels"
+                            [chartType]="doughnutChartType">
+                        </canvas>
+                    </div>
+                </div>
+                <div *ngIf="node['properties']['requestedEducation'][0]['name']==''" style="display: block;">
+                    <div>Not Available</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

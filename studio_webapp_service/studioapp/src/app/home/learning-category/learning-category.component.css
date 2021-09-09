@@ -1,0 +1,102 @@
+mat-form-field
+{
+    /* display: block; */
+    width: 100%;
+    
+}
+
+.courses
+{
+    width: 70%;
+}
+
+.add-btn
+{
+    width: 30%;
+    text-align: right;
+    color: #673ab7;
+
+}
+
+.plus
+{
+    font-size: 28px;
+}
+
+/* .single-course
+{
+    display: inline-block;
+    margin: 3px 3px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: white;
+    background-color: #673ab7;
+} */
+
+.example-chip-list
+{
+    width: 100%;
+}
+
+
+.single-course
+{
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+.addcourse-btn
+{
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    /* font-weight: 600; */
+    font-size: inherit;
+    background: #673ab70a;
+    color: #673ab7;
+    border: 2px solid #673ab7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addcourse-btn:hover
+{
+    color: white;
+    background: #673ab7;
+}
+
+.course-i
+{
+    color: #555;
+    margin: 0;
+}
+
+.del-icon
+{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.del-course-btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.course-headers
+{
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 20px 0px;
+
+}

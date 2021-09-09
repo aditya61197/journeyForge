@@ -1,0 +1,182 @@
+version: "3.9"
+
+services:
+  mongodb:
+    image: mongo:latest
+    network_mode: host
+    container_name: mongodb_container
+    restart: always
+    volumes:
+      - $HOME/Mongodata:/data/db
+    # ports:
+    #   - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootjourney#123
+      MONGO_INITDB_DATABASE: JourneyForgeDB
+
+  neo4j:
+    image: neo4j:latest
+    network_mode: host
+    container_name: neo4j_container
+    # ports:
+    #   - "7474:7474"
+    #   - "7687:7687" 
+      
+    volumes:
+      - $HOME/plugins:/plugins
+      - $HOME/data:/data
+      - $HOME/import:/import
+  
+  rabbitmq:
+    image: rabbitmq:management
+    network_mode: host
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "journey123"     
+    restart: always
+
+
+  ServiceDiscovery:
+    build: ./eurekaservice
+    image: servicediscovery
+    network_mode: host
+    container_name: ServiceDiscovery_container
+    # ports:
+    #  - 8111:8111
+    restart: always
+
+  ConfigurationServer:
+    build: ./configservice
+    image: configurationserver
+    network_mode: host
+    restart: always
+    container_name: configserver_container
+    env_file:
+      - ./dockerenv/development/configservice.env
+    # ports:
+    #  - 8888:8888   
+  
+    restart: always  
+
+  apigateway:
+    build: ./apigateway
+    image: apigateway
+    network_mode: host
+    restart: always
+    container_name: apigateway_container_journeyforge
+    depends_on:
+      - mongodb
+      - ServiceDiscovery
+    volumes:
+      - ./scripts:/temp/scripts
+    entrypoint:
+      - /temp/scripts/wait-for-service.sh
+      - "java -jar /usr/src/apigateway.jar"
+    # ports:
+    #   - 8000:8000
+
+  ClientWebApp:
+    build: ./client_webapp_service
+    image: clientwebapp
+    network_mode: host
+    container_name: clientwebappservice_container
+    depends_on:
+      - ServiceDiscovery
+      - ConfigurationServer
+    volumes:
+      - ./scripts:/temp/scripts
+    entrypoint:
+      - /temp/scripts/wait-for-service.sh
+      - "java -jar /usr/src/clientwebapp.jar"
+    # ports:
+    #  - 8444:8444
+    restart: always
+  
+  
+
+  JourneyService:
+    build: ./journeyservice
+    image: journeyservice
+    network_mode: host
+    container_name: journeyservice_container
+    depends_on:
+      - mongodb
+      - ServiceDiscovery
+    volumes:
+      - ./scripts:/temp/scripts
+    entrypoint:
+      - /temp/scripts/wait-for-service.sh
+      - "java -jar /usr/src/journeyservice.jar"
+    # ports:
+    #  - 8333:8333
+    restart: always
+
+  StudioWebApp:
+    build: ./studio_webapp_service
+    image: studiowebapp
+    network_mode: host
+    container_name: studiowebapp_container
+    depends_on:
+      - ServiceDiscovery
+      - ConfigurationServer
+    volumes:
+      - ./scripts:/temp/scripts
+    entrypoint:
+      - /temp/scripts/wait-for-service.sh
+      - "java -jar /usr/src/studiowebapp.jar"
+    # ports:
+    #  - 8555:8555
+    restart: always
+
+  userservice:
+    build: ./userservice
+    image: userservice
+    network_mode: host
+    container_name: UserService_container
+    # ports:
+    #  - 8222:8222
+    depends_on:
+      - mongodb
+      - ServiceDiscovery
+    restart: always
+    volumes:
+      - ./scripts:/temp/scripts
+    entrypoint:
+      - /temp/scripts/wait-for-service.sh
+      - "java -jar /usr/src/userservice.jar"
+  
+
+  dataprofiling:
+    build: ./DataProfiling
+    image: dataprofiling
+    network_mode: host
+    container_name: DataProfiling
+    depends_on:
+      - rabbitmq
+    restart: always
+    volumes:
+      - ./scripts:/temp/scripts
+    entrypoint:
+      - /temp/scripts/wait-for-service.sh
+      - "java -jar /usr/src/dataprofiling.jar"
+
+
+  DataProfilingDataJson:
+    build: ./DataProfilingDataJson
+    image: dataprofilingdatajson
+    network_mode: host
+    container_name: dataprofilingdatajson_container
+    restart: always
+    volumes:
+      - ./DataProfilingDataJson/db.json:/data/db.json
+  # BotService:  
+  #     build: .
+  #     image:  BotService
+  #     conatiner_name:  BotService_container
+  #     environment:
+  #     ports:
+  #      - 9008:
+  #     depends_on:
+  #      - 
+  #     restart: always

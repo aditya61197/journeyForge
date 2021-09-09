@@ -1,0 +1,33 @@
+<!-- <mat-sidenav-container class="example-sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a (click)="goToNodes()" mat-list-item>Nodes</a>
+      <a (click)="goToNodeCategories()" mat-list-item>Node Categories</a>
+    </mat-nav-list>
+  </mat-sidenav> -->
+
+
+  <div id="nodecategories-component">
+    <div>
+  
+      <div class="nodecategories-header">
+        <div>
+          <h2>Node Categories</h2>
+        </div>
+        <!-- <div>
+          <button mat-raised-button color="primary">Create new Node Category</button>
+        </div> -->
+      </div>
+  
+      <div class="nodecategories-list-container">
+  
+        <div id="nodecategories-list" *ngFor="let nodeCategory of nodeCategories">
+          <app-node-category [nodeCategory]="nodeCategory"></app-node-category>
+        </div>
+      </div>
+    </div>
+  
+  
+  </div>
+  
+  <!-- </mat-sidenav-container> -->

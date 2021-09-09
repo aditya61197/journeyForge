@@ -1,0 +1,23 @@
+.footer{
+    position:relative;
+    line-height: 2.4rem;
+    flex: 1;
+    padding: 48px;
+    z-index: 0;
+    font-weight: 300;
+    display: block;
+    background-color:#1C2541 ;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
+    max-width: 100%;
+    bottom:0;
+    margin-top: 50px;
+}
+.about{
+    display: flex;
+    color:#FFFFFF;
+    font-family: "AlegreyaBold";
+    justify-content: center;
+}
+.example-container{
+    cursor: pointer;
+}

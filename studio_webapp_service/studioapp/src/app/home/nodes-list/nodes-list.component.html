@@ -1,0 +1,51 @@
+<!-- <mat-sidenav-container class="example-sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a (click)="goToNodes()" mat-list-item>Nodes</a>
+      <a (click)="goToNodeCategories()" mat-list-item>Node Categories</a>
+    </mat-nav-list>
+  </mat-sidenav> -->
+
+
+<div id="nodes-component">
+
+
+  <div>
+
+    <div class="nodes-header">
+      <div>
+        <h2>Nodes <span class="total-nodes">( Total Nodes : {{totalNodesInDomain}} )</span></h2>
+      </div>
+      <div class="features-node-list">
+
+        <div class="search-bar" style="font-size: 11px;">
+          <mat-form-field class="search-form-field" appearance="outline">
+            <mat-label>Search Node</mat-label>
+            <input [(ngModel)]="filterTerm" matInput placeholder="Node Name">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <button (click)="openCreateNodeDialog()" mat-raised-button color="primary">Create new Node </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="nodes-list-container">
+
+      <div id="nodes-list" *ngFor="let node of nodes | filter:filterTerm">
+        <app-node [node]="node"></app-node>
+      </div>
+
+
+    </div>
+
+    <mat-paginator [length]="totalNodesInDomain" [pageSize]="10" (page)="openPageNo($event)" >
+
+    </mat-paginator>
+  </div>
+
+</div>
+
+<!-- </mat-sidenav-container> -->

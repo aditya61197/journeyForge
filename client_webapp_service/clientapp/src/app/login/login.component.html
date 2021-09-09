@@ -1,0 +1,147 @@
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+    <mat-card-title style="text-align:center; font-weight: bolder;">JourneyForge</mat-card-title>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab label="Sign In">
+          <mat-card-content>
+            <form #loginForm="ngForm" (ngSubmit)="loginFormSubmit(loginForm)">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Email"
+                  required
+                  name="emailid"
+                  ngModel
+                  #email="ngModel">
+                  <mat-error *ngIf="email.invalid">Email is required</mat-error>
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  required
+                  minlength="6"
+                  name="password"
+                  ngModel
+                  #password="ngModel">
+                  <mat-error
+                    *ngIf="password.errors && password.errors.required">
+                    Password is required
+                  </mat-error>
+                  <mat-error
+                    *ngIf="password.errors && password.errors.minlength">
+                    Password must be of length 6
+                  </mat-error>
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+              <mat-checkbox>Remember Me!</mat-checkbox>
+              <div *ngIf="loginsuccess" style="color: green; text-align: center;">Login Successfull</div>
+              <div *ngIf="loginfail" style="color: red; text-align: center;">Bad Creadentials</div>
+              <button
+                mat-raised-button
+                color="primary"
+                class="login-button"
+                type="submit">
+                Sign In
+              </button>
+            </form>
+            <button
+            mat-raised-button
+            class="login-button" (click) = "googleLogin()" style="color:aliceblue;"
+            ><i class="fab fa-google"></i>
+                Login with Google
+          </button>
+         <!-- <a href="http://localhost:8000/api/v1/studio/login"><button>Login google</button></a> -->
+          <!-- </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Sign Up">
+        <mat-card-content>
+          <form  #registrationForm="ngForm" (ngSubmit)="registrationFormSubmit(registrationForm)">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="User Name"
+                required
+                name="name"
+                ngModel
+                #username="ngModel" >
+              <mat-icon matSuffix>perm_identity</mat-icon>
+              <mat-error
+                *ngIf="username.invalid">
+                Username is required
+              </mat-error>
+
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Email"
+                required
+                name="emailid"
+                ngModel
+                #email="ngModel">
+                <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="password"
+                ngModel
+                #password="ngModel">
+                <mat-error
+                  *ngIf="password.invalid && password.errors?.required" >
+                  Password is required
+                </mat-error>
+
+                <mat-error
+                  *ngIf="password.errors && password.errors.minlength">
+                  Password must be of length 6
+                </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+
+            </mat-form-field>
+            <mat-form-field>
+                <input
+                matInput
+                placeholder="Re-Enter the Password"
+                type="password"
+                required
+                minlength="6"
+                name="repassword" appCustomFieldValidater="password"
+                ngModel
+                #repassword="ngModel">
+                <mat-error
+                  *ngIf="repassword.errors && repassword.errors.required">
+                  Re-Enter Password is required
+                </mat-error>
+                <mat-error
+                *ngIf="repassword.touched && repassword.errors?.notEqual ">
+                password and confirm password doesn't match
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+            <div *ngIf="msgTrue" style="color: green; text-align: center;">Successfull!!! Thank you for Registering With JourneyForge</div>
+            <div *ngIf="msgError" style="color: red; text-align: center;">User already registered, Login </div>
+            <button
+              mat-raised-button
+              color="primary"
+              class="login-button">
+
+              Sign Up
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
+<router-outlet></router-outlet> -->
+ -->

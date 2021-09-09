@@ -1,0 +1,71 @@
+#nodes-component {
+  margin: 15px;
+  /* background-color: rgb(197, 197, 197); */
+  min-height: 80vh;
+}
+
+h2 {
+  padding: 0px 10px;
+}
+
+.nodes-header {
+  border-bottom: 2px solid #673ab7;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+
+.example-sidenav-container {
+  position: sticky !important;
+  top: 0 !important;
+  height: 91vh;
+  background: white;
+}
+
+.mat-sidenav a:hover {
+  background-color: gainsboro;
+}
+
+.mat-sidenav {
+  width: 200px;
+}
+
+.nodes-list-container {
+  /* background-color: rgb(197, 197, 197); */
+}
+
+.features-node-list {
+  display: flex;
+}
+
+.search-bar {
+  margin-right: 2em;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  padding-bottom: 0px;
+  margin: 0px 0px 0px 0px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #673ab7;
+  /* font-weight: 600; */
+  /* border: 2px solid #673ab7; */
+}
+
+.total-nodes {
+  margin-left: 1em;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+}
+
+.mat-paginator-page-size {
+  display: none !important;
+}
+
+.search-form-field {
+  width: 300px;
+}

@@ -1,0 +1,57 @@
+<div class="single-node">
+    <mat-accordion class="example-headers-align">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <div *ngIf="nodeCategoryName.includes('Job')">
+                        <img class="node-cate-indicator-symbol" src="assets/briefcase.svg" >
+                    </div>
+    
+                    <div *ngIf="nodeCategoryName.includes('Learning')">
+                        <img class="node-cate-indicator-symbol" src="assets/book-open.svg" >
+                    </div>
+                    {{node.nodeName}}
+                </mat-panel-title>
+
+                <mat-panel-description>
+                    
+                    <div *ngIf="nodeCategoryName.includes('Learning')">
+                        <div *ngIf="node['properties']['level']=='Beginner'" class="level-notifier-beginner">Level : {{node['properties']['level']}}</div>
+                        <div *ngIf="node['properties']['level']=='Intermediate'" class="level-notifier-intermediate">Level : {{node['properties']['level']}}</div>
+                        <div *ngIf="node['properties']['level']=='Expert'" class="level-notifier-expert">Level : {{node['properties']['level']}}</div>
+                        <div *ngIf="node['properties']['level']==''" class="level-notifier-na">Level : NA</div>
+                    </div>
+
+                    <div class="job-indicator" *ngIf="nodeCategoryName.includes('Job')">
+                        <div class="average-salary" *ngIf="node['properties']['averageSalary']!=''">Average Salary : ₹ {{node['properties']['averageSalary']}}</div>
+
+                        <div class="average-salary" *ngIf="node['properties']['averageSalary']==''">Average Salary : ₹ NA</div>
+
+                        <div class="job-openings" *ngIf="node['properties']['averageSalary']!=''">Job Openings : {{node['properties']['totalJobOpenings']}}</div>
+
+                        <div class="job-openings" *ngIf="node['properties']['averageSalary']==''">Job Openings : NA</div>
+                    </div>
+                </mat-panel-description>
+
+            </mat-expansion-panel-header>
+
+            <div class="node-details">
+
+                <div *ngIf="nodeCategoryName.includes('Job')">
+                    <app-job-detail [node]="node"></app-job-detail>
+                </div>
+
+                <div *ngIf="nodeCategoryName.includes('Learning')">
+                    <app-learning-detail [node]="node"></app-learning-detail>
+                </div>
+                
+            </div>
+
+            <section align="end">
+                <button (click)="openUpdateNodeDialog(node)" mat-raised-button color="primary" >Update</button>
+    <!--            <app-update-node-dialog [nodeUpdate]="nodeToUpdate"></app-update-node-dialog>-->
+              </section>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

@@ -1,0 +1,56 @@
+#nodecategories-component {
+    margin: 15px;
+    /* background-color: gray; */
+    min-height: 80vh;
+  }
+  
+  h2 {
+    padding: 0px 10px;
+  }
+  
+  .nodecategories-header {
+    border-bottom: 2px solid #673ab7;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+  
+  mat-expansion-panel {
+    padding: 5px 0px;
+  }
+  
+  .single-nodecategory {
+    margin-bottom: 10px;
+  }
+  
+  mat-panel-title {
+    /* font-size: 20px; */
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  h3 {
+    font-weight: 500;
+  }
+  
+  .example-sidenav-container {
+    position: sticky !important;
+    top: 0 !important;
+    height:91vh;
+    background: white;
+  }
+  
+  .mat-sidenav a:hover {
+    background-color: gainsboro;
+  }
+  .mat-sidenav {
+    width: 200px;
+  }
+
+  .nodecategories-list-container
+  {
+    display: flex;
+  }
+  
